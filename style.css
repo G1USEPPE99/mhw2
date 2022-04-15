@@ -1,0 +1,77 @@
+:root {
+    --answer-padding: 10px;
+}
+
+.choice-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.choice-grid div {
+    width: calc(32.5% - 2*var(--answer-padding));
+    background-color: #f4f4f4;
+    border: 1px solid #dcdcdc;
+    padding: var(--answer-padding);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.choice-grid div img {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.choice-grid div img.checkbox {
+    margin-bottom: 0px;
+}
+
+.choice-grid div.selected {
+    background-color: #cfe3ff;
+}
+
+.unselected {
+    opacity: 0.6;
+}
+
+.hidden {
+    display: none;
+}
+
+#results {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#results h1 {
+    margin-top: 0px;
+}
+
+#results .button {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cecece;
+    cursor: pointer;
+}
+
+#results .button:hover {
+    background-color: #e0e0e0;
+}
+
+@media(max-width: 700px) {
+    article {
+        width: 95%;
+    }
+    
+    #circles {
+        display: none;
+    }
+}
+@media(max-width: 500px) {
+    .choice-grid div {
+        width: calc(49% - 2*var(--answer-padding));
+    }
+}
